@@ -1,3 +1,5 @@
+// https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/palindrome-check-2/
+
 /*-----------------------------------------*
 *      **      ** * *    * * *   * * *     *
 *     *  *     *     *     *     *    *    *
@@ -7,23 +9,25 @@
 ___________________________________________*/
 
 #include<bits/stdc++.h>
-#define lld long long int
-#define py cout<<"YES"<<"\n";
-#define pn cout<<"NO"<<"\n";
-#define nl <<"\n";
-#define srt(v) sort(v.begin(), v.end());
-#define srev(str) reverse(str.begin(), str.end());
-#define loop(i,x,n) for(lld i=x;i<n;i++)
-
+#define lld = long long int
+#define py cout<<"YES"<<endl;
+#define pn cout<<"NO"<<endl;
+#define nl <<endl;
+#define tc cin >> t;
 #define speed ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
-const lld N = 1e7 + 10;
-lld Arr[N];
+const int N = 1e7 + 10;
+int Arr[N];
 
 void solve()
 {
-    py
+    string str;
+    cin >> str;
+    string s1= str;
+    reverse(str.begin(), str.end());
+    if((str==s1)) py
+    else pn
 }
 int main()
 {
@@ -31,4 +35,5 @@ int main()
     int t=1;
     //cin>>t;
     while (t--) solve();
+    
 }

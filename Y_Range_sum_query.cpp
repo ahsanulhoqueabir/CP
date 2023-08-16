@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Y?fbclid=IwAR0YfBh1j81X0mKrL7zcfO5ykzHfVAn0VyKTDne2K89Pj7tUfCuuEAA1Hio
+
 /*-----------------------------------------*
 *      **      ** * *    * * *   * * *     *
 *     *  *     *     *     *     *    *    *
@@ -8,22 +10,33 @@ ___________________________________________*/
 
 #include<bits/stdc++.h>
 #define lld long long int
-#define py cout<<"YES"<<"\n";
-#define pn cout<<"NO"<<"\n";
-#define nl <<"\n";
-#define srt(v) sort(v.begin(), v.end());
-#define srev(str) reverse(str.begin(), str.end());
-#define loop(i,x,n) for(lld i=x;i<n;i++)
-
+#define py cout<<"YES"<<endl;
+#define pn cout<<"NO"<<endl;
+#define nl <<endl;
+#define tc cin >> t;
 #define speed ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
-const lld N = 1e7 + 10;
-lld Arr[N];
+const int N = 1e6 + 10;
+long long int Arr[N];
 
 void solve()
 {
-    py
+    Arr[0]=0;
+    lld n,q;
+    cin >> n >> q;
+    lld a[n];
+    for(int i=1;i<=n;i++)
+    {
+        cin>>a[i];
+        Arr[i]= Arr[i-1]+a[i];
+    }
+    while ( q-- )
+    {
+        int l,r;
+        cin>>l>>r;
+        cout << Arr[r]-Arr[l-1] nl
+    }
 }
 int main()
 {
