@@ -1,5 +1,4 @@
 /*-----------------------------------------*
-*                                          * 
 *      **      ** * *    * * *   * * *     *
 *     *  *     *     *     *     *    *    *
 *    ******    ******      *     ** **     *
@@ -23,12 +22,31 @@ using namespace std;
 
 void solve()
 {
-    py
+    lld m, k, a1, a2;
+    cin>>m>>k>>a1>>a2;
+
+    if(a1>=m || (m%k<=a1 && m/k<=a2))
+    {
+        cout<<0<<"\n";
+    }
+    else
+    {
+        lld y = min(m/k,a2);
+        lld x = min(m-k*y,a1);
+        lld r = m-x-k*y;
+        if(r%k==0){
+            cout<<r/k<<"\n";
+        }
+        else if( (k - r%k) <= x ){
+            cout<<(r/k)+1<<"\n";
+        }
+        else cout<<(r/k)+(r%k)<<"\n";
+    }
 }
 int main()
 {
     speed
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }

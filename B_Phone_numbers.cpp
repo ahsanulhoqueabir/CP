@@ -23,7 +23,26 @@ using namespace std;
 
 void solve()
 {
-    py
+    lld n;
+    cin >> n;
+    string number;
+    cin >> number;
+    if(n%2==0) 
+    {
+        for(int i=0; i<n-2; i+=2)
+        {
+            cout<<number[i]<<number[i+1]<<"-";
+        }
+        cout<<number[n-2]<<number[n-1];     
+    }
+    else
+    {
+        for(int i=0; i<n-3; i+=2)
+        {
+            cout<<number[i]<<number[i+1]<<"-";
+        }
+        cout<<number[n-3]<<number[n-2]<<number[n-1];
+    }
 }
 int main()
 {

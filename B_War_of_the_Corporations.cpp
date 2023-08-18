@@ -23,7 +23,23 @@ using namespace std;
 
 void solve()
 {
-    py
+    string s1,s2;
+    cin >> s1 >> s2;
+    lld ct=0;
+    for(lld i=0;i<s1.size();i++)
+    {
+       lld ctt=0;
+       for(lld j=0;j<s2.size();j++)
+       {
+        if(s1[i+j]==s2[j]) ctt++;
+       }
+       if(ctt == s2.size())
+       {
+        ct++;
+        i+=(s2.size()-1);
+       }
+    }
+    cout << ct nl
 }
 int main()
 {

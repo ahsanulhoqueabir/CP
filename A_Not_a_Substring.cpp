@@ -20,15 +20,37 @@ ___________________________________________*/
 
 using namespace std;
 
-
 void solve()
 {
+   
+    string s; 
+    cin >>s;
+    if(s == "()") 
+    {
+        cout << "NO" << "\n";
+    }
+    else
+    {
     py
+    int ct=0,ctt=0;
+    for(int i=0;i<s.size();i++)
+    {
+        if((s[i]=='(' && s[i+1]!=')') || (s[i]!='(' && s[i+1]==')')) ct++;
+        if(s[i]==')') ctt++;
+    }
+    int Max=max(ct,ctt);
+    
+    for(int i=0;i<2*ct;i++) cout << "(";
+    for(int i=0;i<2*ct;i++) cout << ")";
+    cout nl
+
+    }
+
 }
 int main()
 {
     speed
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }
