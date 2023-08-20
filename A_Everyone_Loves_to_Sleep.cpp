@@ -9,7 +9,6 @@ ___________________________________________*/
 
 #include<bits/stdc++.h>
 #define lld long long int
-#define ld long double
 #define py cout<<"YES"<<"\n";
 #define pn cout<<"NO"<<"\n";
 #define nl <<"\n";
@@ -24,50 +23,23 @@ using namespace std;
 
 void solve()
 {
-    ld a,b,c;
-    cin>>a>>b>>c;
-    ld d=b*b-4*a*c;
-    if(a==0 and b==0 and c==0)
-    {
-        cout << "-1"; 
-        return;
-    }
-    if(a==0 and b==0)
-    {
-        cout << 0 nl
-        return ;
-    }
-    if(a==0)
-    {
-        cout << 1 nl
-        cout<< (-c/b) nl
-        return ;
-    }
-    if(d==0)
-    {
-        cout << 1 nl
-        cout<< (-b+sqrtl(d))/2/a nl
-    }
-    else if(d<0)
-    {
-        cout << 0 nl
-    }
-    else
-    {
-        cout << 2 nl
-        vector<ld>ans;
-        ans.push_back((-b-sqrtl(d))/2/a);
-        ans.push_back((-b+sqrtl(d))/2/a);
-        srt(ans);
-        cout<<  ans[0] nl 
-        cout <<  ans[1] nl
-    }
+    lld n,h,m;
+	cin>>n>>h>>m;
+	lld tm=h*60+m;
+	lld a=1510;
+	while(n--)
+	{
+		cin>>h>>m;
+		lld p=h*60+m;
+		if(p<tm)p+=(24*60);
+		a=min(a,abs(p-tm));
+	}
+	cout << a/60 <<" " << a%60 nl
 }
 int main()
 {
     speed
-    cout<< fixed << setprecision(12);
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }

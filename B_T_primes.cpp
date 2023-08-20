@@ -9,7 +9,6 @@ ___________________________________________*/
 
 #include<bits/stdc++.h>
 #define lld long long int
-#define ld long double
 #define py cout<<"YES"<<"\n";
 #define pn cout<<"NO"<<"\n";
 #define nl <<"\n";
@@ -20,54 +19,43 @@ ___________________________________________*/
 #define speed ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
-
+const int N = 1e6 + 10;
+lld A[N];
+void count()
+{
+    for(lld i=1;i<N;i++)
+    {
+        int ct=0;
+        for(lld j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                ct++;
+            }
+            if(ct>3)
+            {
+                A[i]=0;
+                break;
+            }
+            if(ct<=3)
+            {
+                A[i]=1;
+            }
+        }
+    }
+}
 
 void solve()
 {
-    ld a,b,c;
-    cin>>a>>b>>c;
-    ld d=b*b-4*a*c;
-    if(a==0 and b==0 and c==0)
-    {
-        cout << "-1"; 
-        return;
-    }
-    if(a==0 and b==0)
-    {
-        cout << 0 nl
-        return ;
-    }
-    if(a==0)
-    {
-        cout << 1 nl
-        cout<< (-c/b) nl
-        return ;
-    }
-    if(d==0)
-    {
-        cout << 1 nl
-        cout<< (-b+sqrtl(d))/2/a nl
-    }
-    else if(d<0)
-    {
-        cout << 0 nl
-    }
-    else
-    {
-        cout << 2 nl
-        vector<ld>ans;
-        ans.push_back((-b-sqrtl(d))/2/a);
-        ans.push_back((-b+sqrtl(d))/2/a);
-        srt(ans);
-        cout<<  ans[0] nl 
-        cout <<  ans[1] nl
-    }
+    lld n;
+    cin>>n;
+    if(A[n]==0) pn cout nl
+    else py cout nl
 }
 int main()
 {
     speed
-    cout<< fixed << setprecision(12);
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }

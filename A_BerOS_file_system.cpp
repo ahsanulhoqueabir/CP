@@ -9,7 +9,6 @@ ___________________________________________*/
 
 #include<bits/stdc++.h>
 #define lld long long int
-#define ld long double
 #define py cout<<"YES"<<"\n";
 #define pn cout<<"NO"<<"\n";
 #define nl <<"\n";
@@ -24,49 +23,37 @@ using namespace std;
 
 void solve()
 {
-    ld a,b,c;
-    cin>>a>>b>>c;
-    ld d=b*b-4*a*c;
-    if(a==0 and b==0 and c==0)
+    string s,s1;
+    cin>>s;
+    lld l=s.size();
+    lld f=0;
+    for(int i=l-1; i>0; i--)
     {
-        cout << "-1"; 
-        return;
+        if(s[i]!='/') 
+        {
+            break;
+        }
+        else l--;
     }
-    if(a==0 and b==0)
+ 
+    for(int i=0; i<l; i++)
     {
-        cout << 0 nl
-        return ;
-    }
-    if(a==0)
-    {
-        cout << 1 nl
-        cout<< (-c/b) nl
-        return ;
-    }
-    if(d==0)
-    {
-        cout << 1 nl
-        cout<< (-b+sqrtl(d))/2/a nl
-    }
-    else if(d<0)
-    {
-        cout << 0 nl
-    }
-    else
-    {
-        cout << 2 nl
-        vector<ld>ans;
-        ans.push_back((-b-sqrtl(d))/2/a);
-        ans.push_back((-b+sqrtl(d))/2/a);
-        srt(ans);
-        cout<<  ans[0] nl 
-        cout <<  ans[1] nl
+        if(f==0 && s[i]=='/')
+        {
+            cout<<s[i];
+            f=1;
+        }
+ 
+        else if(s[i]!='/')
+        {
+            cout<<s[i];
+            f=0;
+        }
     }
 }
 int main()
 {
     speed
-    cout<< fixed << setprecision(12);
     int t=1;
     //cin>>t;
     while (t--) solve();
