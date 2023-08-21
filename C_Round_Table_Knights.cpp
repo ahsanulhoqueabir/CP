@@ -1,3 +1,4 @@
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -16,24 +17,41 @@ ___________________________________________*/
 #define srev(str) reverse(str.begin(), str.end());
 #define loop(i,x,n) for(lld i=x;i<n;i++)
 
-#define speed ios_base::sync_with_stdio(false); cin.tie(NULL);
+#define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
 
 
-void solve()
+int solve()
 {
-    lld n;
-    cin>>n;
-    if(n%2==0)
-    cout<<n/2 nl    
-    else
-    cout<<(n-1)/2 nl
+   	lld n,c;
+    cin >> n;
+    lld a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin >> a[i];
+    }
+    for(int i=1;i<=n/3;i++)
+	{
+		if(n%i==0)
+			for(int j=0;j<i;j++)
+			{
+				int k=j;
+				while(a[k] && k<n) 
+                    k=k+i;
+				if(k>=n)
+				{
+					py
+					return 0;
+				}
+			}
+	}
+	pn
 }
 int main()
 {
-    speed
+    AHSAN
     int t=1;
-    cin>>t;
+    //cin>>t;
     while (t--) solve();
 }

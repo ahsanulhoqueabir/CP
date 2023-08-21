@@ -14,26 +14,38 @@ ___________________________________________*/
 #define nl <<"\n";
 #define srt(v) sort(v.begin(), v.end());
 #define srev(str) reverse(str.begin(), str.end());
-#define loop(i,x,n) for(lld i=x;i<n;i++)
+#define FOR(i,x,n) for(lld i=x;i<n;i++)
 
-#define speed ios_base::sync_with_stdio(false); cin.tie(NULL);
+#define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
 
 
 void solve()
 {
-    lld n;
-    cin>>n;
-    if(n%2==0)
-    cout<<n/2 nl    
-    else
-    cout<<(n-1)/2 nl
+    string s;
+    cin>>s;
+    lld n=0,i=0,e=0,t=0;
+    for(int j=0;j<s.size();j++)
+    {
+        if(s[j]=='n') n++;
+        if(s[j]=='i') i++;
+        if(s[j]=='e') e++;
+        if(s[j]=='t') t++;
+    }
+    // cout << n << " "<< i << " " << e << " " << " " << t nl 
+    lld x=(n-1)/2;
+    lld y=e/3;
+    lld a[4]={x,y,i,t};
+    sort(a,a+4);
+    cout<< a[0] nl
+
+
 }
 int main()
 {
-    speed
+    AHSAN
     int t=1;
-    cin>>t;
+    //cin>>t;
     while (t--) solve();
 }
