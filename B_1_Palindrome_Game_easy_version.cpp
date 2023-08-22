@@ -1,3 +1,6 @@
+// https://codeforces.com/problemset/problem/1527/B1
+
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -24,7 +27,15 @@ using namespace std;
 
 void solve()
 {
-    py
+    string s;
+    lld n,zc=0;
+    cin>>n>>s;
+    FOR(i,0,n){
+        if(s[i]=='0') zc++;
+    }
+    if(zc==1) cout<<"BOB\n";
+    else if(zc%2) cout<<"ALICE\n";
+    else cout<<"BOB\n";
 }
 int main()
 {

@@ -24,11 +24,34 @@ using namespace std;
 
 void solve()
 {
-    py
+    ld a,b;
+    char c;
+    cin >> a>>b>>c;
+    ld f= a/b;
+    int fl=0,ct=0;
+    // cout << f nl
+    lld r= (100000000000) *(f - int(f));
+    //  cout <<r;
+    string s;
+    s = to_string(r);
+    for(int i=1;i<s.size();i++)
+    {
+        if(s[i]==c)
+        {
+            fl=1;
+            ct=i+1;
+            break;
+        }
+    }
+    if(fl==1) cout << ct;
+    else cout << "-1";
+    cout nl
+    
 }
 int main()
 {
     AHSAN
+    cout << fixed << setprecision(12);
     int t=1;
     //cin>>t;
     while (t--) solve();
