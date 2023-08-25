@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/82/A
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -20,12 +22,43 @@ ___________________________________________*/
 #define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
-// const lld N= 1e7 + 10;
-// lld A[N];
+
 
 void solve()
 {
-    py
+    lld n;
+    cin >> n;
+    n--;
+    int d= 1,ct=0;
+    for(int i = 0; i < n; i += d) 
+    {
+		ct++;
+		if(ct == 5) 
+        {
+			ct = 0;
+			d *= 2;
+		}
+	}
+    switch (ct)
+    {
+    case 4:
+        cout << "Howard" nl
+        break;
+    case 0:
+        cout << "Sheldon" nl
+        break;
+    case 1:
+        cout << "Leonard" nl
+        break;
+    case 2:
+        cout << "Penny" nl
+        break;
+    case 3:
+        cout << "Rajesh" nl
+        break;
+    
+    
+    }
 }
 int main()
 {

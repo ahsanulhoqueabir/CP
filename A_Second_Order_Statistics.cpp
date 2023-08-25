@@ -20,12 +20,25 @@ ___________________________________________*/
 #define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
-// const lld N= 1e7 + 10;
-// lld A[N];
+
 
 void solve()
 {
-    py
+    lld n,f=0;
+    cin >> n;
+    lld a[n],b[n];
+    FOR(i,0,n) cin >> a[i];
+    sort(a,a+n);
+    for(int i=1;i<n;i++)
+    {
+       if(a[i]!=a[0])
+       {
+            cout << a[i];
+            f=1;
+            break;
+       }
+    }
+   if(!f) pn
 }
 int main()
 {

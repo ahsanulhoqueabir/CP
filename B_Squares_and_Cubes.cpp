@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/1619/problem/B
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -20,17 +22,23 @@ ___________________________________________*/
 #define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
-// const lld N= 1e7 + 10;
-// lld A[N];
+
 
 void solve()
 {
-    py
+    lld n;
+    cin >> n;
+    // set<lld>a;
+    // for(int i=1;i*i<=n;i++) a.insert(i*i);
+    // for(int i=2;i*i*i<=n;i++) a.insert(i*i*i);
+    // cout << a.size() nl
+    lld r =(int) sqrt(n)+(int)cbrt(n)-(int)sqrt(cbrt(n));
+    cout << r nl
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }

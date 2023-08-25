@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/1619/problem/C
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -20,17 +22,42 @@ ___________________________________________*/
 #define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 
 using namespace std;
-// const lld N= 1e7 + 10;
-// lld A[N];
+
 
 void solve()
 {
-    py
+    lld a,s,ans=0,p=1,x,t;
+	cin >>a >>s;
+	while(s!=0) 
+    {
+		x = s%10;
+		s=s/10;
+		t = a%10;
+		a=a/10;
+		if(t>x) 
+        {
+			x= x + 10*(s%10);
+			s=s/10;
+		}
+		if((x-t ) > 9 || t>x) 
+        {
+			cout<< "-1" nl
+			return;
+		}
+		ans = ans + p*(x-t);
+		p=p*10;
+	}
+	if(a!=0) 
+    {
+		cout << "-1" nl
+		return;
+	}
+	cout << ans nl
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }
