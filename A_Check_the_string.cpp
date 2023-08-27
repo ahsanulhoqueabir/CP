@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/960/A
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -25,42 +27,28 @@ using namespace std;
 
 void solve()
 {
-    lld n,k; cin >> n >>k;
-    string s; cin>> s;
-    if(k%2==0)
+    string str1,str2;
+    cin >>str1;
+    str2=str1;
+    srt(str1);
+    if(str1!=str2) pn
+    else
     {
-        srt(s);
-        cout << s nl
-        return;
-    }
-    vector<array<int,2>> ct(26);
-    FOR(i,0,n)
-    {
-        ct[s[i]-'a'][i%2]++;
-    }
-    string ans="";
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<26;j++)
+        lld a=0,b=0,c=0;
+        for(int i=0;i<str1.size();i++)
         {
-            if(ct[j][i%2]>0)
-            {
-                ct[j][i%2]--;
-                ans+=(j+'a');
-                break;
-            }
+            if(str1[i]=='a') a++;
+            if(str1[i]=='b') b++;
+            if(str1[i]=='c') c++;
         }
+        if((c==b && c!=0 && a!=0) || (c==a && c!=0 && b!=0)) py
+        else pn
     }
-    cout << ans nl
-    // lld a,b; cin >>a >>b;
-    // string s; cin>> s;
-    // srt(s);
-    // cout << s nl
 }
 int main()
 {
     AHSAN
     int t=1;
-    cin>>t;
+    //cin>>t;
     while (t--) solve();
 }

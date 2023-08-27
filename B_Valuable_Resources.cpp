@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/485/problem/B
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -22,45 +24,25 @@ ___________________________________________*/
 using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
-
 void solve()
 {
-    lld n,k; cin >> n >>k;
-    string s; cin>> s;
-    if(k%2==0)
+    lld max_x=-1*(1e9+9),min_x=1e9+9,max_y=-1*(1e9+9),min_y=1e9+9,x,y,n; 
+    cin >>n;
+    while(n--)
     {
-        srt(s);
-        cout << s nl
-        return;
+        cin>>x>>y;
+        if(x>max_x)max_x=x;
+        if(x<min_x)min_x=x;
+        if(y>max_y)max_y=y;
+        if(y<min_y)min_y=y;
     }
-    vector<array<int,2>> ct(26);
-    FOR(i,0,n)
-    {
-        ct[s[i]-'a'][i%2]++;
-    }
-    string ans="";
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<26;j++)
-        {
-            if(ct[j][i%2]>0)
-            {
-                ct[j][i%2]--;
-                ans+=(j+'a');
-                break;
-            }
-        }
-    }
-    cout << ans nl
-    // lld a,b; cin >>a >>b;
-    // string s; cin>> s;
-    // srt(s);
-    // cout << s nl
+     x=max((max_y-min_y),(max_x-min_x));
+     cout << (x*x) nl
 }
 int main()
 {
     AHSAN
     int t=1;
-    cin>>t;
+    // cin>>t;
     while (t--) solve();
 }
