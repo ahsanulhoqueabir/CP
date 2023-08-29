@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/4/C
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -20,9 +22,21 @@ ___________________________________________*/
 using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
+
 void solve()
 {
-    py
+    lld n; cin>>n;
+    map<string,int> m;
+    FOR(i,0,n)
+    {
+        string s; cin >> s;
+        if(m[s]==0) cout << "OK" nl
+        else
+        {
+            cout<< (s + to_string(m[s])) nl
+        }
+        m[s]++;
+    }
 }
 int main()
 {
