@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/1231/problem/B
+
 /*-----------------------------------------*
 *                                          * 
 *      **      ** * *    * * *   * * *     *
@@ -24,7 +26,27 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    lld n,k; cin >> n >> k;
+    string s; cin >> s;
+    if(k==0) out(s)
+    else if(n==1) cout << 0 nl
+    else
+    {
+        if(s[0]!='1')
+        {
+            s[0] = '1';
+            k--;
+        }
+        for(lld i=1;i<n;i++)
+        {
+            if(s[i]!='0'&& k)
+            {
+                s[i]='0';
+                k--;
+            }
+        }
+        out(s);
+    }
 }
 int main()
 {
