@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/841/A
+
 /*--------------------------------------------------------*
 *                                                         *
 *      **       *     *   ** ****       **      *     **  *
@@ -24,7 +26,17 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    lld n,k; in(n) in(k)
+    string s; in(s)
+    int a[128]={0};
+    for(int i=0;i<s.size();i++)
+    {
+        // int x = (int)s[i];
+        a[(int)s[i]]++;
+    }
+    sort(a,a+128);
+    if(a[127]>k) pn
+    else py
 }
 int main()
 {
