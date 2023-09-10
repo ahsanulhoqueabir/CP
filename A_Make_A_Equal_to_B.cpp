@@ -24,23 +24,19 @@ using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
 void solve()
-{   
-    lld a,b,c,ct=1; in(a) in(b) in(c)
-    if(a%b==0) { outn(-1) return; }
-    a=10*a;
-	while(a/b!=c)
-    {
-		a%=b;
-		a*=10;
-		ct++;
-		if(ct==1000000)
-        { out(-1) return;}
-	} out(ct)    
+{
+    lld n,cnt1=0,cnt2=0,cnt=0,f=1; in(n)
+    lld a[n],b[n];
+    FOR(i,0,n) { in(a[i]) if(a[i]==1) cnt1++; }
+    FOR(i,0,n) { in(b[i]) if(b[i]==1) cnt2++; }
+    FOR(i,0,n) { if(a[i]!=b[i]) cnt++;}
+    f+= abs(cnt1-cnt2);
+    outn(min(f,cnt))
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }

@@ -12,6 +12,7 @@
 #define ld long double
 #define in(x) cin >> x;
 #define out(x) cout << x;
+#define outn(x) cout << x << "\n";
 #define py cout<<"YES"<<"\n";
 #define pn cout<<"NO"<<"\n";
 #define nl <<"\n";

@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/1506/A
+
 /*--------------------------------------------------------*
 *                                                         *
 *      **       *     *   ** ****       **      *     **  *
@@ -24,23 +26,14 @@ using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
 void solve()
-{   
-    lld a,b,c,ct=1; in(a) in(b) in(c)
-    if(a%b==0) { outn(-1) return; }
-    a=10*a;
-	while(a/b!=c)
-    {
-		a%=b;
-		a*=10;
-		ct++;
-		if(ct==1000000)
-        { out(-1) return;}
-	} out(ct)    
+{
+    lld n,m,x; in(n) in(m) in(x)
+    outn(((x-1)%n)*m + (x+n-1)/n)
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }

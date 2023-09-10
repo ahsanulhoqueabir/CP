@@ -24,23 +24,29 @@ using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
 void solve()
-{   
-    lld a,b,c,ct=1; in(a) in(b) in(c)
-    if(a%b==0) { outn(-1) return; }
-    a=10*a;
-	while(a/b!=c)
-    {
-		a%=b;
-		a*=10;
-		ct++;
-		if(ct==1000000)
-        { out(-1) return;}
-	} out(ct)    
+{
+       lld n,k; in(n) in(k)
+       multiset<lld> bags;
+       for(lld i=0;i<n;i++)
+       {
+            lld a;in(a)
+            bags.insert(a);
+       }
+       lld tc=0;
+       for(lld i=0;i<k;i++)
+       {
+            auto last_it = (--bags.end()); 
+            lld ct= *last_it;
+            tc +=ct;
+            bags.erase(last_it);
+            bags.insert(ct/2);
+       }
+       outn(tc)  
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }

@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/837/A
+
 /*--------------------------------------------------------*
 *                                                         *
 *      **       *     *   ** ****       **      *     **  *
@@ -24,18 +26,19 @@ using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
 void solve()
-{   
-    lld a,b,c,ct=1; in(a) in(b) in(c)
-    if(a%b==0) { outn(-1) return; }
-    a=10*a;
-	while(a/b!=c)
+{
+    lld n; cin >> n;
+    string str;
+    getline(cin,str);
+    getline(cin,str);
+    lld ct=0,m=0;
+    for(int i=0;i<str.size();i++)
     {
-		a%=b;
-		a*=10;
-		ct++;
-		if(ct==1000000)
-        { out(-1) return;}
-	} out(ct)    
+        if(isupper(str[i])) ct++;
+        m=max(m,ct);
+        if(str[i]==' ') ct=0;
+    }
+    out(m)
 }
 int main()
 {

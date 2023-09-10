@@ -12,30 +12,32 @@
 #define ld long double
 #define in(x) cin >> x;
 #define out(x) cout << x;
+#define outs(x) cout << x <<" ";
 #define outn(x) cout << x << "\n";
 #define py cout<<"YES"<<"\n";
 #define pn cout<<"NO"<<"\n";
 #define nl <<"\n";
 #define srt(v) sort(v.begin(), v.end());
-#define srev(str) reverse(str.begin(), str.end());
+#define rev(str) reverse(str.begin(), str.end());
 #define FOR(i,x,n) for(lld i=x;i<n;i++)
 #define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
 void solve()
-{   
-    lld a,b,c,ct=1; in(a) in(b) in(c)
-    if(a%b==0) { outn(-1) return; }
-    a=10*a;
-	while(a/b!=c)
+{
+    lld n; in(n)
+    vector<lld>v(n),ans;
+    for(auto &i:v) in(i)
+    map<int,int>m;
+    for(lld i=n-1;i>=0;i--)
     {
-		a%=b;
-		a*=10;
-		ct++;
-		if(ct==1000000)
-        { out(-1) return;}
-	} out(ct)    
+        if(m[v[i]]==0) ans.push_back(v[i]);
+        m[v[i]]++;
+    }
+    rev(ans) 
+    outn(ans.size())
+    for(auto &i : ans) outs(i)
 }
 int main()
 {
