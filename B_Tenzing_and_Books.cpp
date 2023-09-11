@@ -26,12 +26,27 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    lld n,x,r=0; in(n) in(x)
+    lld a[3][n];
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<n;j++) in(a[i][j])
+	}
+    for(int i=0;i<3;i++)
+    {
+		for(int j=0;j<n;j++)
+        {
+			if((x|a[i][j])==x) r|=a[i][j];
+			else break;
+		}
+	}
+    if(r==x) py
+    else pn
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }
