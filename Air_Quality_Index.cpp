@@ -16,7 +16,7 @@
 #define outn(x) cout << x << "\n";
 #define py cout<<"YES"<<"\n";
 #define pn cout<<"NO"<<"\n";
-#define nl cout <<"\n";
+#define nl <<"\n";
 #define srt(v) sort(v.begin(), v.end());
 #define srev(str) reverse(str.begin(), str.end());
 #define FOR(i,x,n) for(lld i=x;i<n;i++)
@@ -26,7 +26,9 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    lld n; in(n)
+    if(n<100) py
+    else pn
 }
 int main()
 {

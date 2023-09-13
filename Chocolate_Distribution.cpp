@@ -26,12 +26,13 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    lld a; in(a)
+    outs(1) outs(1) outs(a-2) nl
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }
