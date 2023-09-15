@@ -24,10 +24,17 @@
 #define AHSAN ios_base::sync_with_stdio(false); cin.tie(NULL);
 using namespace std;
 // const lld N= 1e7 + 10;
-// lld A[N];
+lld A[1450];
 void solve()
 {
-    
+    lld n,ct=0,mx=0; in(n)
+    while(n--)
+    {
+        lld x,y; in(x) in(y)
+        A[(x*60)+y]++;
+    }
+    sort(A,A+1440,dsc);
+    outn(A[0])
 }
 int main()
 {

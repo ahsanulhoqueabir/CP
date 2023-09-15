@@ -27,12 +27,26 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    lld n,k,c=1,x=0; in(n) in(k)
+    lld a[n];
+    FOR(i,0,n) in(a[i])
+    sort(a,a+n,dsc);
+    for(int i=0;i<n-1;i++)
+    {
+        if(a[i]-a[i+1]<=k)
+        {
+            c++;
+            if(c>x) x=c;
+        }
+            else c=1;
+    }
+    if(x>c) outn(n-x)
+    else outn(n-c)
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }
