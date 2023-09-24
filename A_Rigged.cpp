@@ -28,12 +28,29 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    lld n,s,e; in(n)
+    vp v;
+    FOR(i,0,n)
+    {
+        in(s) in(e)
+        v.push_back({s,e});
+    }
+    FOR(i,1,n)
+    {
+        if(v[i].first >= v[0].first)
+        {
+            if(v[i].second >= v[0].second)
+            {
+                outn(-1) return;
+            }
+        }
+    }
+    outn(v[0].first)
 }
 int main()
 {
     AHSAN
     int t=1;
-    //cin>>t;
+    cin>>t;
     while (t--) solve();
 }
