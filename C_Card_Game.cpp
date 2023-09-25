@@ -29,21 +29,22 @@ const lld N= 1e7 + 10;
 lld a[N],b[N];
 void solve()
 {
-    lld n,c=0; in(n)
-    for(lld i=0;i<=n;i++) b[i]=0;
+    lld n,ans=0; in(n)
+    // vector<lld>v;
+    lld v[n];
+    FOR(i,0,n) 
+    {
+        in(v[i])
+        if(v[i]>0) ans+=v[i];
+    }
+    if(n==1) outn(ans)
+    else if(v[0]<0 and v[1]>0)
+    {
+        if(v[0] + v[1]>0) outn(ans+v[0])
+        else outn(ans - v[1])
+    }
+    else outn(ans)
 
-    for(lld i=0;i<n;i++) in(a[i])
-    
-    for(lld i=n-1;i>=0;i--)
-    {
-        b[i]=b[i+1]+ (a[i]>=0? a[i]:0);
-    }
-    lld ans=0;
-    for(lld i=0;i<n;i++)
-    {
-        ans = max(ans,(b[i+1]+(i%2==0?a[i]:0)));
-    }
-    outn(ans)
 }
 int main()
 {

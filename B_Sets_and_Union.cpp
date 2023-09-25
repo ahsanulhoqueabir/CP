@@ -84,6 +84,7 @@ void solve()
             for(auto j:i) if(j==it) f=0;
             if(f==1) for(auto z:i) tmp.insert(z);
         }
+        for(auto x:tmp) outs(x)
         ans = max(ans,(lld)tmp.size());
     }
     outn(ans)
