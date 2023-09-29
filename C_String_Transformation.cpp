@@ -29,7 +29,24 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    string s; in(s)
+    char c='a';
+    int f=0;
+    for(lld i=0;i<s.size();i++)
+    {
+       if(s[i]<=c)
+       {
+           s[i]=c;
+           c++;
+       }
+       if(c=='z'+1)
+       {
+           f=1;
+           break;
+       }
+   }
+   if(f) outn(s)
+   else outn(-1)
 }
 int main()
 {
