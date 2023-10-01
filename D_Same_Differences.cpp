@@ -27,30 +27,20 @@
 using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
-
 void solve()
 {
-    lld n, m; in(n) in(m)
-    lld gc = __gcd(n, m);
-    n%= m;
-    lld mm = m / gc;
-    if ((mm & (mm - 1))) 
+    lld n; in(n)
+    lld a[n];
+    map<lld,lld>m;
+    lld r=0;
+    for(lld i=0;i<n;i++)
     {
-        outn(-1)
-        return;
-    }
-    lld ans = 0;
-    while (n) 
-    {
-        ans += n;
-        n <<= 1;
-        if (n>= m) 
-        {
-            n-=m;
-        }
-    }
-    outn(ans)
-} 
+        lld x; in(x)
+        x-=i;
+        r+=m[x];
+        m[x]++;
+    } outn(r)
+}
 int main()
 {
     AHSAN

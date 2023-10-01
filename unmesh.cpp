@@ -11,7 +11,15 @@
 using namespace std;
 void solve()
 {
-    
+    int a,b; 
+    cin >> a >> b;
+    int x=__gcd(a,b);
+    int p = b/x;
+    int q=(a%=b);
+    cout << x << endl;
+    cout << q << endl;
+    cout << (p & (p-1)) << endl;
+    // cout << (x & (x+1)) << endl;
 }
 int main()
 {
