@@ -19,6 +19,7 @@
 #define nl cout << "\n";
 #define vp vector<pair<lld, lld>>
 #define dsc greater<lld>()
+#define all(v) v.begin(), v.end()
 #define srt(v) sort(v.begin(), v.end());
 #define dsrt(v) sort(v.begin(), v.end(), greater<lld>());
 #define srev(str) reverse(str.begin(), str.end());
@@ -28,24 +29,56 @@ using namespace std;
 // const lld N= 1e7 + 10;
 // lld A[N];
 void solve()
-{
-    lld n,m,k; in(n) in(m) in(k)
-    vector<int> a(n);
-    vector<int> b(m);
-
-    FOR(i,0,n) in(a[i])
-    FOR(i,0,m) in(b[i])
-
-    srt(a) srt(b)
-
-    int ct= 0;
-    
-    
+{   
+    string s; in(s)
+    int l=s.size(),a=0,c=0,g=0,t=0,ans=0;
+    for(int i=0;i<l;)
+    {  
+        int x=0;
+        if(s[i]=='A') 
+        {
+            while (s[i]=='A')
+            {
+                x++;
+            }
+                i+=x;
+            ans=max(x,ans);
+        }
+        if(s[i]=='C') 
+        {
+            while (s[i]=='C')
+            {
+                x++;
+            }
+                i+=x;
+            ans=max(x,ans);
+        }
+        if(s[i]=='G') 
+        {
+            while (s[i]=='G')
+            {
+                x++;
+            }
+                i+=x;
+            ans=max(x,ans);
+        }
+        if(s[i]=='T') 
+        {
+            while (s[i]=='T')
+            {
+                x++;
+            }
+                i+=x;
+            ans=max(x,ans);
+        }
+        
+    }
+    outn(ans)
 }
 int main()
 {
     AHSAN
     int t = 1;
-    cin>>t;
+    // cin>>t;
     while (t--) solve();
 }

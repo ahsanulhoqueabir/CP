@@ -29,23 +29,24 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    lld n,m,k; in(n) in(m) in(k)
-    vector<int> a(n);
-    vector<int> b(m);
-
-    FOR(i,0,n) in(a[i])
-    FOR(i,0,m) in(b[i])
-
-    srt(a) srt(b)
-
-    int ct= 0;
-    
-    
+    long long n; in(n) outs(n)
+    while(n!=1)
+    {
+        int x;
+        if(!(n&1))
+        {
+            n>>=1; outs(n)
+        }
+        else
+        {
+            n=(n*3)+1; outs(n)
+        } 
+    }
 }
 int main()
 {
     AHSAN
     int t = 1;
-    cin>>t;
+    // cin>>t;
     while (t--) solve();
 }

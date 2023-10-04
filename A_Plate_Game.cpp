@@ -29,23 +29,14 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    lld n,m,k; in(n) in(m) in(k)
-    vector<int> a(n);
-    vector<int> b(m);
-
-    FOR(i,0,n) in(a[i])
-    FOR(i,0,m) in(b[i])
-
-    srt(a) srt(b)
-
-    int ct= 0;
-    
-    
+    lld a,b,r; in(a) in(b) in(r)
+    if(a>=(2*r) and b>=(2*r)) outn("First")
+    else outn("Second")
 }
 int main()
 {
     AHSAN
     int t = 1;
-    cin>>t;
+    // cin>>t;
     while (t--) solve();
 }

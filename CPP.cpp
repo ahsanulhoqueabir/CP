@@ -19,6 +19,7 @@
 #define nl cout << "\n";
 #define vp vector<pair<lld, lld>>
 #define dsc greater<lld>()
+#define all(v) v.begin(), v.end()
 #define srt(v) sort(v.begin(), v.end());
 #define dsrt(v) sort(v.begin(), v.end(), greater<lld>());
 #define srev(str) reverse(str.begin(), str.end());
@@ -29,7 +30,9 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-    
+    int a=11;
+    int x=a&1;
+    outn(x)
 }
 int main()
 {
