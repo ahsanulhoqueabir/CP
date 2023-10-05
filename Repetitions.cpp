@@ -31,48 +31,17 @@ using namespace std;
 void solve()
 {   
     string s; in(s)
-    int l=s.size(),a=0,c=0,g=0,t=0,ans=0;
-    for(int i=0;i<l;)
+    int l=s.size(),a=0,ct=1,ans=1;
+    for(int i=0;i<l;i++)
     {  
-        int x=0;
-        if(s[i]=='A') 
+        if(s[i]==s[i+1]) ct++;
+        else 
         {
-            while (s[i]=='A')
-            {
-                x++;
-            }
-                i+=x;
-            ans=max(x,ans);
+            ans=max(ct,ans);
+            ct=1;
         }
-        if(s[i]=='C') 
-        {
-            while (s[i]=='C')
-            {
-                x++;
-            }
-                i+=x;
-            ans=max(x,ans);
-        }
-        if(s[i]=='G') 
-        {
-            while (s[i]=='G')
-            {
-                x++;
-            }
-                i+=x;
-            ans=max(x,ans);
-        }
-        if(s[i]=='T') 
-        {
-            while (s[i]=='T')
-            {
-                x++;
-            }
-                i+=x;
-            ans=max(x,ans);
-        }
-        
     }
+    ans=max(ans,ct);
     outn(ans)
 }
 int main()

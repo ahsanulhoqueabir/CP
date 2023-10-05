@@ -30,7 +30,18 @@ using namespace std;
 // lld A[N];
 void solve()
 {
+    lld n,ans=0; in(n)
+    vector <lld>v(n);
+    FOR(i,0,n) in(v[i])
     
+    for(int i=1;i<n;i++) 
+    {
+        if (v[i]<v[i-1]) 
+        {
+            ans += v[i-1]-v[i]; 
+            v[i]=v[i-1];  
+        }
+    } outn(ans)
 }
 int main()
 {
