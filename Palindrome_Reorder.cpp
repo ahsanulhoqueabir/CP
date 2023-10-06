@@ -8,7 +8,7 @@
  *_________________________________________________________*/
 
 #include <bits/stdc++.h>
-#define lld long long int
+#define ll long long 
 #define ld long double
 #define in(x) cin >> x;
 #define out(x) cout << x;
@@ -30,36 +30,46 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-   lld n; in(n)
-   lld s=n*(n+1)/2;
-   if(s&1) pn
-   else
-   {
-        outn("YES")
-        lld ss= s>>1; 
-        // outn(ss)
-        lld set1[n],set2[n];
-        lld x=0,y=0;
-        lld a=n;
-
-        while(a>0) 
+    string s; in(s)
+    int a[128]={0};
+    int l=s.size(),ct=0;
+    char c;
+    for(int i=0;i<l;i++)
+    {
+        int x=(int)s[i];
+        a[x]++;
+    }
+    for(int i=0;i<128;i++)
+    {
+        if(a[i]&1) 
         {
-            if(ss-a>=0) 
-            {
-                set1[x++]=a;
-                ss-=a;
-            } 
-            else 
-            {
-                set2[y++]=a;
-            }
-            a--;
+            ct++;
+            c=char(i);
         }
-        outn(x)
-        FOR(i,0,x) outs(set1[i]) nl
-        outn(y)
-        FOR(i,0,y) outs(set2[i]) nl    
-   }
+    }
+    if(ct>1) outn("NO SOLUTION")
+    else
+    {
+        string ss;
+        for (int i=0;i<128;i++) 
+        {
+            if(a[i]%2==0) 
+            {
+                for(int j=0;j<a[i]/2;j++) 
+                {
+                    ss += (char)(i);
+                }
+            }
+        }
+        string s2=ss;
+        srev(ss)
+        if(ct==1) 
+        {
+            cout << s2;
+            for(int i=0;i<a[(int)c];i++) out(c)  outn(ss) 
+        }
+        else cout << (s2+ss) << endl;    
+    }
 }
 int main()
 {

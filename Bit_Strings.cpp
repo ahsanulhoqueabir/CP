@@ -8,7 +8,7 @@
  *_________________________________________________________*/
 
 #include <bits/stdc++.h>
-#define lld long long int
+#define ll long long 
 #define ld long double
 #define in(x) cin >> x;
 #define out(x) cout << x;
@@ -30,36 +30,15 @@ using namespace std;
 // lld A[N];
 void solve()
 {
-   lld n; in(n)
-   lld s=n*(n+1)/2;
-   if(s&1) pn
-   else
-   {
-        outn("YES")
-        lld ss= s>>1; 
-        // outn(ss)
-        lld set1[n],set2[n];
-        lld x=0,y=0;
-        lld a=n;
-
-        while(a>0) 
-        {
-            if(ss-a>=0) 
-            {
-                set1[x++]=a;
-                ss-=a;
-            } 
-            else 
-            {
-                set2[y++]=a;
-            }
-            a--;
-        }
-        outn(x)
-        FOR(i,0,x) outs(set1[i]) nl
-        outn(y)
-        FOR(i,0,y) outs(set2[i]) nl    
-   }
+    ll n; in(n)
+    ll ans=1;
+    ll M=1e9+7;
+    while (n--)
+    {
+        ans<<=1;
+        ans%=M;
+    }
+    outn(ans)
 }
 int main()
 {
