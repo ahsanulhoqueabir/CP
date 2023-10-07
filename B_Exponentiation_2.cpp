@@ -17,26 +17,42 @@
 #define py cout << "YES" << "\n";
 #define pn cout << "NO" << "\n";
 #define nl cout << "\n";
-#define vp vector<pair<lld, lld>>
-#define dsc greater<lld>()
+#define vp vector<pair<ll, ll>>
+#define dsc greater<ll>()
 #define all(v) v.begin(), v.end()
 #define srt(v) sort(v.begin(), v.end());
-#define dsrt(v) sort(v.begin(), v.end(), greater<lld>());
+#define dsrt(v) sort(v.begin(), v.end(), greater<ll>());
 #define srev(str) reverse(str.begin(), str.end());
-#define FOR(i, x, n) for (lld i = x; i < n; i++)
+#define FOR(i, x, n) for (ll i = x; i < n; i++)
 #define AHSAN  ios_base::sync_with_stdio(false); cin.tie(NULL);
 using namespace std;
-// const lld N= 1e7 + 10;
-// lld A[N];
-void solve()
+// const ll N= 1e7 + 10;
+// ll A[N];
+const ll M=1e9+7;
+ll ex(ll a,ll b)
 {
-    ll a,b; in(a) in(b)
-    if(a>=(b/2) or b>= )
+    if(b==0) return 1;
+    ll res=ex(a,b/2);
+    if(b&1)
+    {
+        return ((a*((res*res)%M))%M);
+    }
+    else
+    {
+        return ((res*res)%M);
+    }
+}
+void solve()
+{  
+    ll a,b,c; in(a) in(b) in(c)
+    ll x=(b*c);
+    ll ans=ex(a,x);
+    outn(ans)    
 }
 int main()
 {
     AHSAN
     int t = 1;
-    // cin>>t;
+    cin>>t;
     while (t--) solve();
 }
