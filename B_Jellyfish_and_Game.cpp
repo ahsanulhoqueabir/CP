@@ -32,15 +32,19 @@ void solve()
     lld n,m,k; in(n) in(m) in(k)
     vector<int> a(n);
     vector<int> b(m);
-
     FOR(i,0,n) in(a[i])
     FOR(i,0,m) in(b[i])
 
     srt(a) srt(b)
+    if(a[0]<b[m-1]) swap(a[0],b[m-1]);
 
-    int ct= 0;
-    
-    
+    if(k%2==0)
+    {
+        srt(a) srt(b)
+		swap(a[n-1],b[0]);
+	}
+	lld ans=0;
+	for(int i=0;i<n;i++) ans+=a[i]; outn(ans)
 }
 int main()
 {
