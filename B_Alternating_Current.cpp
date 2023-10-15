@@ -14,8 +14,8 @@
 #define out(x) cout << x;
 #define outs(x) cout << x << " ";
 #define outn(x) cout << x << "\n";
-#define py cout << "YES" << "\n";
-#define pn cout << "NO" << "\n";
+#define py cout << "Yes" << "\n";
+#define pn cout << "No" << "\n";
 #define nl cout << "\n";
 #define vp vector<pair<ll, ll>>
 #define dsc greater<ll>()
@@ -30,35 +30,23 @@ using namespace std;
 // ll A[N];
 void solve()
 {
-    
+    stack<char> st;
+    string s; in(s)
+    ll n = s.size();
+    // st.push(s[0]);
+    loop(i,0,n) 
+    {
+        char ch = s[i];
+        if((st.size() != 0) and (ch == st.top())) st.pop();
+        else st.push(s[i]);
+    }
+    if(st.size() == 0) py
+    else pn
 }
 int main()
 {
     AHSAN
-    ll t = 1;
-    cin>>t;
-    for(ll i=1;i<=t;i++)
-    {
-        ll n;
-        cin >> n;
-
-        vector<ll> v(n);
-        for (ll i=0;i<n;i++)  cin >> v[i];
-        ll nb =1;
-        ll ct =1;
-
-        for (ll i=1;i<n;i++) 
-        {
-            if (v[i] == v[i-1]) ct++;
-            else 
-            {
-                nb+=(ct*(ct+1))/2;
-                ct=1;
-            }
-        }
-        ll x=(n*(n+1)/2);
-        ll result=x-nb;
-
-        cout << "Case " << i << ": " << result; nl
-    }
+    int t = 1;
+    // cin>>t;
+    while (t--) solve();
 }
