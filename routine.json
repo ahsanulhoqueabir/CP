@@ -1,0 +1,142 @@
+{
+  "sunday": {
+    "day": "Sunday",
+    "routine": [
+      {
+        "time": "08:30 - 10:30",
+        "course": "Data Communication Lab",
+        "courseCode": "CSEL-2108",
+        "type": "Major",
+        "teacher": "Nayeema Islam",
+        "room": "SW Lab-2: Software Lab-2 (6th Floor)"
+      },
+      {
+        "time": "10:30 - 11:30",
+        "course": "Introduction to Statistic and Probability",
+        "courseCode": "CSE-2106",
+        "type": "Non-Major",
+        "teacher": "Shahnaz Parvin ",
+        "room": "Room-721"
+      },
+      {
+        "time": "11:30 - 12:30",
+        "course": "Financial and Managerial Accounting",
+        "courseCode": "CSER-2109",
+        "type": "Non-Major",
+        "teacher": "Dr. Omor Faruk ",
+        "room": "Room-721"
+      },
+      {
+        "time": "1:30 - 2:30",
+        "course": "Digital Logic Design",
+        "courseCode": "CSE-2103",
+        "type": "Major",
+        "teacher": "Prof. Dr. Md. Nasir Uddin",
+        "room": "Room-721"
+      },
+      {
+        "time": "2:30 - 3:30",
+        "course": "Object Oriented Programming-II",
+        "courseCode": "CSE-2101",
+        "type": "Major",
+        "teacher": "Dr. Sajeeb Saha",
+        "room": "Room-721"
+      }
+    ]
+  },
+  "monday": {
+    "day": "Monday",
+    "routine": [
+      {
+        "time": "08:30 - 10:30",
+        "course": "Math- III (Ordinary differential Equation)",
+        "courseCode": "CSER-2105",
+        "type": "Non-Major",
+        "teacher": "Md. Ashraful Islam ",
+        "room": "Room-721"
+      },
+      {
+        "time": "10:30 - 12:30",
+        "course": "Object Oriented Programming-II",
+        "courseCode": "CSE-2101",
+        "type": "Major",
+        "teacher": "Dr. Sajeeb Saha",
+        "room": "Room-721"
+      },
+      {
+        "time": "1:30 - 3:30",
+        "course": "Object Oriented Programming-II Lab",
+        "courseCode": "CSEL-2102",
+        "type": "Major",
+        "teacher": "Tanvir Ahammad",
+        "room": "SW Lab-2: Software Lab-2 (6th Floor)"
+      }
+    ]
+  },
+  "tuesday": {
+    "day": "Tuesday",
+    "routine": [
+      {
+        "time": "8:30 - 10:30",
+        "course": "Digital Logic Design",
+        "courseCode": "CSE-2103",
+        "type": "Major",
+        "teacher": "Prof. Dr. Md. Nasir Uddin",
+        "room": "Room-721"
+      },
+      {
+        "time": "10:30 - 12:30",
+        "course": "Data Communication",
+        "courseCode": "CSE-2107",
+        "type": "Major",
+        "teacher": "Nayeema Islam",
+        "room": "Room-721"
+      },
+      {
+        "time": "1:30 - 3:30",
+        "course": "Data Communication",
+        "courseCode": "CSE-2107",
+        "type": "Major",
+        "teacher": "Nayeema Islam",
+        "room": "Room-721"
+      }
+    ]
+  },
+  "thursday": {
+    "day": "Thursday",
+    "routine": [
+      {
+        "time": "8:30 - 10:00",
+        "course": "Financial and Managerial Accounting",
+        "courseCode": "CSER-2109",
+        "type": "Non-Major",
+        "teacher": "Dr. Omor Faruk ",
+        "room": "Room-721"
+      },
+      {
+        "time": "10:00 - 11:00",
+        "course": "Math- III (Ordinary differential Equation)",
+        "courseCode": "CSER-2105",
+        "type": "Non-Major",
+        "teacher": "Md. Ashraful Islam ",
+        "room": "Room-721"
+      },
+      {
+        "time": "11:00 - 12:30",
+        "course": "Digital Logic Design",
+        "courseCode": "CSEL-2104",
+        "type": "Major",
+        "teacher": "Prof. Dr. Md. Nasir Uddin",
+        "room": "Hardware Lab: 5th Floor"
+      },
+      {
+        "time": "10:30 - 11:30",
+        "course": "Introduction to Statistic and Probability",
+        "courseCode": "CSE-2106",
+        "type": "Non-Major",
+        "teacher": "Shahnaz Parvin ",
+        "room": "Room-601"
+      }
+    ]
+  }
+}
